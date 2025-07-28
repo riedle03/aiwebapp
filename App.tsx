@@ -4,7 +4,7 @@ import { TUTORIAL_SECTIONS, HOME_SECTION } from './constants';
 import { TutorialSectionData } from './types';
 import TutorialPage from './components/TutorialPage';
 import { icons } from './components/icons';
-import { Menu } from 'lucide-react';
+import { PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 
 const navItems = [
   { id: 'home', path: '/', title: '시작하기', icon: icons.Home, data: HOME_SECTION},
@@ -21,14 +21,14 @@ const navItems = [
   { id: TUTORIAL_SECTIONS[10].id, path: `/${TUTORIAL_SECTIONS[10].id}`, title: '저자 소개', icon: icons.User, data: TUTORIAL_SECTIONS[10]},
 ];
 
-const Header: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => (
+const Header: React.FC<{ toggleSidebar: () => void; isOpen: boolean }> = ({ toggleSidebar, isOpen }) => (
   <header className="p-4 bg-white border-b border-gray-200 flex items-center h-16 flex-shrink-0">
     <button
       onClick={toggleSidebar}
       className="p-2 rounded-md text-gray-500 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
       aria-label="메뉴 토글"
     >
-      <Menu className="w-6 h-6" />
+      {isOpen ? <PanelLeftClose className="w-6 h-6" /> : <PanelLeftOpen className="w-6 h-6" />}
     </button>
   </header>
 );
@@ -84,7 +84,7 @@ const App: React.FC = () => {
         <div className="flex flex-1 overflow-hidden">
           <Sidebar isOpen={isSidebarOpen} />
           <div className="flex-1 flex flex-col min-w-0">
-            <Header toggleSidebar={toggleSidebar} />
+            <Header toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} />
             <main className="flex-1 p-8 lg:p-12 overflow-y-auto bg-gray-50">
               <Routes>
                 {navItems.map(item => (
