@@ -103,11 +103,13 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
       {
         title: '1. 터미널 열기',
         text: 'Codespaces의 VS Code 편집기에서 상단 메뉴의 "Terminal" > "New Terminal"을 클릭하여 터미널을 엽니다.',
+        image: 'images/vite-install-1.png',
       },
       {
         title: '2. Vite 프로젝트 생성 실행',
         text: '아래 명령어를 터미널에 입력하고 엔터를 눌러 Vite 설치를 시작합니다. 명령어 마지막의 `.`은 현재 폴더에 프로젝트를 생성하라는 의미입니다.',
         code: 'npm create vite@latest .',
+        image: 'images/vite-install-2.png',
         language: 'bash',
       },
       {
@@ -269,6 +271,7 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
       {
         title: '참고: Gemini API 키 발급받기',
         text: 'Gemini API 키가 아직 없다면 [Google AI Studio](https://aistudio.google.com/app/apikey)에서 무료로 발급받을 수 있습니다. Google 계정으로 로그인하고 "Create API key" 버튼을 눌러 새 키를 생성하세요.',
+        image: 'images/netlify-env-vars-4.png'
       },
     ],
   },
