@@ -4,19 +4,23 @@ export const HOME_SECTION: TutorialSectionData = {
   id: 'home',
   title: '교실 속 아이디어를 현실로, AI 웹앱 개발 첫걸음',
   steps: [{ 
-    title: '가이드 소개: 무엇을 배우고 무엇을 만드나요?',
-    text: `**강의 소개**
-이 가이드는 AI 기술을 활용한 웹 애플리케이션을 직접 만들고 배포하고자 하는 선생님들을 위한 실습 중심의 개발 환경 설정 안내서입니다. 복잡한 설치 과정 없이 클라우드 기반 도구를 사용하여 누구나 쉽게 따라 할 수 있도록 구성되었습니다.
+    title: '무엇을 배우고 무엇을 만드나요?',
+    text: `🚀**가이드 소개**
+'바이브 코딩'의 시대입니다. ChatGPT, Gemini 같은 대화형 AI부터 Canva, Genspark 등 다양한 AI 도구를 활용하면 누구나 멋진 웹 애플리케이션을 만들 수 있습니다. 하지만 아이디어를 현실로 만드는 과정, 특히 AI가 생성한 코드를 클라우드에 올려 전 세계에 선보이는 배포 작업은 여전히 많은 분에게 낯설고 어렵게 느껴집니다.
 
-**학습 목표**
+GitHub, Vite, Netlify와 같은 도구들은 분명 강력하고 편리하지만, 처음 접하는 분들에게는 넘기 힘든 장벽처럼 보일 수 있습니다.
+
+이 가이드는 바로 그 장벽을 허물기 위해 만들어졌습니다. 생성형 AI로 나만의 웹앱을 만들고, 무료로 배포하는 전체 과정을 누구나 자기 주도적으로 학습할 수 있도록 돕는 것이 목표입니다. 특히 AI 교육에 관심 있는 선생님들과 새로운 기술에 도전하는 학생들이 이 가이드를 통해 '나도 할 수 있다!'는 자신감을 얻기를 바랍니다.
+
+🎯**학습 목표**
 이 가이드를 통해 선생님들은 최신 웹 기술과 AI를 접목하는 과정을 경험하게 됩니다. 단순히 코드를 따라 치는 것을 넘어, '왜' 이 도구를 사용하고 '어떻게' 아이디어를 실제 웹 서비스로 만들어내는지 이해하는 것을 목표로 합니다.
 
-**이 과정을 마치면 무엇을 할 수 있나요?**
-- GitHub를 통해 코드를 관리하고 협업의 기초를 다질 수 있습니다.
-- 클라우드 개발 환경(Codespaces)에서 프로젝트를 설정하고 개발할 수 있습니다.
-- Vite와 React를 사용하여 반응형 웹 애플리케이션의 뼈대를 만들 수 있습니다.
-- Google Gemini와 같은 강력한 AI 모델을 웹 애플리케이션에 연동할 수 있습니다.
-- Netlify를 통해 자신의 웹 애플리케이션을 전 세계에 공개하고 공유할 수 있습니다.
+✨**이 과정을 마치면 무엇을 할 수 있나요?**
+- GitHub를 통해 코드를 체계적으로 관리하고 협업의 기초를 다질 수 있습니다.
+- Vite와 같은 최신 도구를 사용하여 반응형 웹 애플리케이션의 뼈대를 빠르게 구축할 수 있습니다.
+- Google Gemini와 같은 강력한 AI 모델을 웹 애플리케이션에 연동하여 독창적인 기능을 구현할 수 있습니다.
+- Netlify를 통해 단 몇 번의 클릭만으로 자신의 웹 애플리케이션을 전 세계에 공개하고 공유할 수 있습니다.
+- 생성형 AI를 활용한 웹 개발의 전체 흐름을 이해하고, 자신만의 프로젝트를 기획하고 실현할 수 있는 역량을 갖추게 됩니다.
 
 **학습 순서**
 왼쪽의 메뉴를 따라 다음 순서로 학습을 진행하게 됩니다.
@@ -24,16 +28,21 @@ export const HOME_SECTION: TutorialSectionData = {
 2. ##ICON:Code## **Repository 개설**: 코드를 저장하고 관리할 온라인 공간을 만듭니다.
 3. ##ICON:Terminal## **Codespaces 실행**: 브라우저에서 바로 코딩할 수 있는 클라우드 개발 환경을 시작합니다.
 4. ##ICON:Zap## **Vite 설치하기**: 최신 기술을 사용하여 웹 프로젝트를 설정하고 필요한 라이브러리를 설치합니다.
-5. ##ICON:Cloud## **Netlify 회원가입**: 웹 애플리케이션을 배포하기 위한 서비스에 가입합니다.
-6. ##ICON:Github## **프로젝트 가져오기**: GitHub의 프로젝트를 Netlify와 연결합니다.
-7. ##ICON:KeyRound## **API 키 설정**: Gemini AI를 사용하기 위한 비밀 키를 안전하게 설정합니다.
-8. ##ICON:Rocket## **배포하기**: 단 몇 번의 클릭으로 나의 웹 애플리케이션을 인터넷에 공개합니다.
-9. ##ICON:LayoutGrid## **결과물**: 이 가이드를 통해 만들 수 있는 다양한 AI 앱 예시를 둘러봅니다.
-10. ##ICON:User## **저자 소개**: 이 가이드를 만든 사람에 대해 알아봅니다.` 
+5. ##ICON:FlaskConical## **바이브코딩**: Google AI Studio를 사용해 프롬프트만으로 앱의 기본 구조를 만듭니다.
+6. ##ICON:Cloud## **Netlify 회원가입**: 웹 애플리케이션을 배포하기 위한 서비스에 가입합니다.
+7. ##ICON:Github## **프로젝트 가져오기**: GitHub의 프로젝트를 Netlify와 연결합니다.
+8. ##ICON:KeyRound## **API 키 설정**: Gemini AI를 사용하기 위한 비밀 키를 안전하게 설정합니다.
+9. ##ICON:Rocket## **배포하기**: 단 몇 번의 클릭으로 나의 웹 애플리케이션을 인터넷에 공개합니다.
+10. ##ICON:LayoutGrid## **AI 웹앱**: 이 가이드를 통해 만들 수 있는 다양한 AI 앱 예시를 둘러봅니다.
+11. ##ICON:User## **저자 소개**: 이 가이드를 만든 사람에 대해 알아봅니다.`,
+    image: 'images/bettshow.jpg',
+    isHero: true,
+    className: 'hero-image', // 추가된 클래스
   }]
 };
 
 export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
+
   {
     id: 'github-signup',
     title: 'GitHub 회원가입',
@@ -202,6 +211,66 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
     ],
   },
   {
+    id: 'vibecoding',
+    title: '바이브코딩',
+    steps: [
+      {
+        title: '1. Google AI Studio에서 앱 빌드 시작하기',
+        text: '먼저 [Google AI Studio](https://aistudio.google.com/apps)에 접속합니다. 화면 좌측의 **Build** 탭을 클릭하여 프롬프트 기반 앱 개발을 시작하세요.',
+        image: 'images/vibecoding-1.png',
+      },
+      {
+        title: '2. 프롬프트로 앱 개발 및 수정',
+        text: '원하는 애플리케이션의 기능을 프롬프트 창에 자유롭게 입력하여 개발을 진행합니다. 예를 들어, "자기소개서 생성기 만들어줘"와 같이 명령할 수 있습니다. 오른쪽의 **Preview** 창에서 실시간으로 결과를 확인하며 만족스러울 때까지 프롬프트를 수정하고 개선하세요.',
+        image: 'images/vibecoding-2.png',
+      },
+      {
+        title: '3. 개발된 앱 다운로드',
+        text: '원하는 기능이 모두 구현되었다면, 상단의 **Download the app** 버튼을 클릭하여 프로젝트 전체를 압축 파일(.zip)로 다운로드합니다.',
+        image: 'images/vibecoding-3.png',
+      },
+      {
+        title: '4. Codespaces에 파일 복사하기',
+        text: '다운로드한 압축 파일의 압축을 풉니다. 그 다음, GitHub Codespaces의 VS Code 편집기 왼쪽에 있는 파일 탐색기 영역으로 압축 해제된 모든 파일과 폴더를 드래그 앤 드롭하여 업로드합니다.',
+        image: 'images/vibecoding-4.png',
+      },
+      {
+        title: '5. 기존 /src 폴더 삭제',
+        text: "바이브코딩으로 다운로드한 파일로 프로젝트를 대체하기 위해, Vite 초기 설정 시 생성된 `/src` 폴더는 삭제해야 합니다. 파일 탐색기에서 `/src` 폴더에 마우스를 올리고 오른쪽 버튼을 클릭한 뒤 **Delete**를 선택하여 삭제하세요.",
+        image: 'images/vibecoding-5.png',
+      },
+      {
+        title: '6. 변경 내용 커밋(Commit) 및 푸시(Push) 준비',
+        text: "이제 새로 추가된 앱 코드를 GitHub에 저장할 차례입니다. VS Code 편집기 왼쪽의 **소스 제어(Source Control)** 아이콘(세 개의 점으로 연결된 가지 모양)을 클릭하세요. 'Changes' 목록 위에 있는 메시지 입력창에 '01'과 같이 이 변경사항을 설명하는 간단한 메시지를 입력합니다.",
+        image: 'images/vibecoding-6.png',
+      },
+      {
+        title: '7. 커밋 및 푸시 실행',
+        text: "메시지 입력 후, **Commit** 버튼 옆의 아래를 향한 꺽쇠(∨) 아이콘을 클릭합니다. 드롭다운 메뉴에서 **Commit & Push**를 선택하세요. 이 작업을 통해 Codespaces의 변경사항이 원격 GitHub 저장소에 안전하게 업로드됩니다. 이제 당신의 코드는 GitHub에 보관됩니다.",
+        image: 'images/vibecoding-7.png',
+      },
+      {
+        title: '8. 로컬 개발용 API 키 설정',
+        text: `Codespaces에서 앱을 테스트하고 개발하기 위해서는 Gemini API 키를 설정해야 합니다. 이 키는 로컬 환경에서만 사용되며, GitHub에는 업로드되지 않습니다.
+
+1.  VS Code 편집기의 파일 탐색기에서 마우스 오른쪽 버튼을 클릭하고 **New File**을 선택합니다.
+2.  파일 이름을 \`.env.local\`로 지정하고 엔터를 누릅니다.
+3.  새로 만든 \`.env.local\` 파일에 아래 내용을 복사하여 붙여넣으세요.
+
+**중요**: \`PLACEHOLDER_API_KEY\` 부분을 반드시 본인의 실제 API 키로 교체해야 합니다. API 키가 없다면 **[Google AI Studio](https://aistudio.google.com/app/apikey)에서 무료로 발급**받을 수 있습니다. \`.env.local\` 파일은 일반적으로 \`.gitignore\` 파일에 포함되어 있어, 실수로 API 키가 GitHub에 공개되는 것을 방지해줍니다.`,
+        code: `GEMINI_API_KEY=PLACEHOLDER_API_KEY`,
+        language: 'text',
+        image: 'images/vibecoding-8.png',
+      },
+      {
+        title: '9. 개발 서버 실행 및 결과 확인',
+        text: '모든 파일을 복사하고 API 키 설정을 마쳤다면, 이제 바이브코딩으로 만든 새로운 웹 앱을 실행할 차례입니다. 터미널에 아래 명령어를 입력하여 개발 서버를 다시 시작하세요. Codespaces는 자동으로 포트를 열어 팝업 창을 통해 실시간으로 변경된 웹 앱의 모습을 보여줄 것입니다.',
+        code: 'npm run dev',
+        language: 'bash',
+      },
+    ],
+  },
+  {
     id: 'netlify-signup',
     title: 'Netlify 회원가입',
     steps: [
@@ -301,6 +370,11 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
     title: 'AI 웹앱 예시',
     steps: [
       {
+        title: '게임 속 맞춤법 용사로 살아남기',
+        text: '[바로가기](https://koreanhero.netlify.app/)',
+        image: 'https://placehold.co/1280x720/e2e8f0/4a5568?text=Korean+Hero'
+      },
+      {
         title: '프로필 페이지',
         text: '[바로가기](https://aicreatorz.netlify.app/)',
         image: 'https://placehold.co/1280x720/e2e8f0/4a5568?text=Profile+Page'
@@ -376,6 +450,12 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
     id: 'author-info',
     title: '저자 소개 및 저서/강의 안내',
     steps: [
+      {
+        title: '이대형 (AI CreatorZ)',
+        text: 'AI 기술을 교육 현장에 접목하여 교사와 학생 모두가 성장할 수 있는 새로운 가능성을 탐구하고 있습니다. AI 기반 웹 애플리케이션 개발, 디지털 수업 설계, 교사 연수 등 다양한 활동을 통해 미래 교육의 청사진을 그리고 있습니다.',
+        image: 'images/experience.jpg',
+        isProfile: true,
+      },
       {
         title: '요즘 교사를 위한 AI 디지털 수업 설계 가이드(한빛미디어)',
         text: '[자세히 보기](https://trpd.me/aibook)',

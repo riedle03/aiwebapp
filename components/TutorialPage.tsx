@@ -166,18 +166,43 @@ const FeaturedProjectCard: React.FC<{ step: TutorialStep; linkText?: string }> =
     );
 };
 
+const AuthorProfileCard: React.FC<{ step: TutorialStep }> = ({ step }) => (
+    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden flex flex-col sm:flex-row">
+        <div className="aspect-square sm:aspect-auto sm:w-1/3 flex-shrink-0">
+            <img 
+                src={step.image} 
+                alt={step.title} 
+                className="w-full h-full object-cover"
+            />
+        </div>
+        <div className="p-6 sm:p-8 flex flex-col justify-center flex-1">
+            <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
+            <div className="mt-4">
+                <ParsedText text={step.text} />
+            </div>
+        </div>
+    </div>
+);
+
 const StepCard: React.FC<{ step: TutorialStep }> = ({ step }) => (
-    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
-        <h3 className="text-xl font-bold text-gray-800 mb-3">{step.title}</h3>
-        <ParsedText text={step.text} />
-        {step.code && step.language && (
-            <CodeBlock code={step.code} language={step.language} />
-        )}
-        {step.image && (
-            <div className="mt-4 rounded-lg overflow-hidden border border-gray-200 flex justify-center items-center bg-gray-50">
-                <img src={step.image} alt={step.title} className="max-w-full h-auto object-contain" />
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 transition-shadow hover:shadow-md overflow-hidden">
+        {step.image && step.isHero && (
+             <div className="w-full bg-gray-50 flex justify-center items-center">
+                <img src={step.image} alt={step.title} className="max-w-full max-h-[60vh] h-auto object-contain" />
             </div>
         )}
+        <div className="p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">{step.title}</h3>
+            <ParsedText text={step.text} />
+            {step.code && step.language && (
+                <CodeBlock code={step.code} language={step.language} />
+            )}
+            {step.image && !step.isHero &&(
+                <div className="mt-4 rounded-lg overflow-hidden border border-gray-200 flex justify-center items-center bg-gray-50">
+                    <img src={step.image} alt={step.title} className="max-w-full h-auto object-contain" />
+                </div>
+            )}
+        </div>
     </div>
 );
 
@@ -226,7 +251,9 @@ const TutorialPage: React.FC<TutorialPageProps> = ({ section, icon: Icon }) => {
               </header>
               <div className="space-y-8">
                   {section.steps.map((item, index) => (
-                      <FeaturedProjectCard key={index} step={item} linkText={linkText} />
+                      item.isProfile ?
+                        <AuthorProfileCard key={index} step={item} /> :
+                        <FeaturedProjectCard key={index} step={item} linkText={linkText} />
                   ))}
               </div>
           </div>

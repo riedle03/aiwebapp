@@ -12,12 +12,13 @@ const navItems = [
   { id: TUTORIAL_SECTIONS[1].id, path: `/${TUTORIAL_SECTIONS[1].id}`, title: TUTORIAL_SECTIONS[1].title, icon: icons.Code, data: TUTORIAL_SECTIONS[1]},
   { id: TUTORIAL_SECTIONS[2].id, path: `/${TUTORIAL_SECTIONS[2].id}`, title: TUTORIAL_SECTIONS[2].title, icon: icons.Terminal, data: TUTORIAL_SECTIONS[2]},
   { id: TUTORIAL_SECTIONS[3].id, path: `/${TUTORIAL_SECTIONS[3].id}`, title: TUTORIAL_SECTIONS[3].title, icon: icons.Zap, data: TUTORIAL_SECTIONS[3]},
-  { id: TUTORIAL_SECTIONS[4].id, path: `/${TUTORIAL_SECTIONS[4].id}`, title: TUTORIAL_SECTIONS[4].title, icon: icons.Cloud, data: TUTORIAL_SECTIONS[4]},
-  { id: TUTORIAL_SECTIONS[5].id, path: `/${TUTORIAL_SECTIONS[5].id}`, title: '프로젝트 가져오기', icon: icons.Github, data: TUTORIAL_SECTIONS[5]},
-  { id: TUTORIAL_SECTIONS[6].id, path: `/${TUTORIAL_SECTIONS[6].id}`, title: 'API 키 설정', icon: icons.KeyRound, data: TUTORIAL_SECTIONS[6]},
-  { id: TUTORIAL_SECTIONS[7].id, path: `/${TUTORIAL_SECTIONS[7].id}`, title: TUTORIAL_SECTIONS[7].title, icon: icons.Rocket, data: TUTORIAL_SECTIONS[7]},
-  { id: TUTORIAL_SECTIONS[8].id, path: `/${TUTORIAL_SECTIONS[8].id}`, title: TUTORIAL_SECTIONS[8].title, icon: icons.LayoutGrid, data: TUTORIAL_SECTIONS[8]},
-  { id: TUTORIAL_SECTIONS[9].id, path: `/${TUTORIAL_SECTIONS[9].id}`, title: '저자 소개', icon: icons.User, data: TUTORIAL_SECTIONS[9]},
+  { id: TUTORIAL_SECTIONS[4].id, path: `/${TUTORIAL_SECTIONS[4].id}`, title: '바이브코딩', icon: icons.FlaskConical, data: TUTORIAL_SECTIONS[4]},
+  { id: TUTORIAL_SECTIONS[5].id, path: `/${TUTORIAL_SECTIONS[5].id}`, title: TUTORIAL_SECTIONS[5].title, icon: icons.Cloud, data: TUTORIAL_SECTIONS[5]},
+  { id: TUTORIAL_SECTIONS[6].id, path: `/${TUTORIAL_SECTIONS[6].id}`, title: '프로젝트 가져오기', icon: icons.Github, data: TUTORIAL_SECTIONS[6]},
+  { id: TUTORIAL_SECTIONS[7].id, path: `/${TUTORIAL_SECTIONS[7].id}`, title: 'API 키 설정', icon: icons.KeyRound, data: TUTORIAL_SECTIONS[7]},
+  { id: TUTORIAL_SECTIONS[8].id, path: `/${TUTORIAL_SECTIONS[8].id}`, title: TUTORIAL_SECTIONS[8].title, icon: icons.Rocket, data: TUTORIAL_SECTIONS[8]},
+  { id: TUTORIAL_SECTIONS[9].id, path: `/${TUTORIAL_SECTIONS[9].id}`, title: TUTORIAL_SECTIONS[9].title, icon: icons.LayoutGrid, data: TUTORIAL_SECTIONS[9]},
+  { id: TUTORIAL_SECTIONS[10].id, path: `/${TUTORIAL_SECTIONS[10].id}`, title: '저자 소개', icon: icons.User, data: TUTORIAL_SECTIONS[10]},
 ];
 
 const Header: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => (

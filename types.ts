@@ -5,6 +5,8 @@ export interface TutorialStep {
   code?: string;
   language?: string;
   image?: string;
+  isProfile?: boolean;
+  isHero?: boolean;
 }
 
 export interface TutorialSectionData {
