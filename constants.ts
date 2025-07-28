@@ -49,7 +49,6 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
       {
         title: '3. 이메일 인증',
         text: '가입 시 입력한 이메일 주소로 인증 메일이 발송됩니다. 메일을 확인하여 계정을 활성화하세요.',
-        image: 'images/github-signup-3.png',
       },
     ],
   },
