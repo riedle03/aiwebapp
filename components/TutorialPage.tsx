@@ -114,11 +114,11 @@ const ProjectCard: React.FC<{ step: TutorialStep; linkText?: string }> = ({ step
             className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2"
             aria-label={`'${step.title}' ${linkText}`}
         >
-            <div className="aspect-video overflow-hidden">
+            <div className="aspect-video overflow-hidden flex items-center justify-center bg-gray-100">
                 <img 
                     src={step.image} 
                     alt={`${step.title} 미리보기`} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105" 
                 />
             </div>
             <div className="p-4 sm:p-5 flex flex-col flex-grow">
@@ -146,11 +146,11 @@ const FeaturedProjectCard: React.FC<{ step: TutorialStep; linkText?: string }> =
             className="group flex flex-col sm:flex-row bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             aria-label={`'${step.title}' ${linkText}`}
         >
-            <div className="sm:w-1/3 flex-shrink-0 aspect-video sm:aspect-auto">
+            <div className="sm:w-1/3 flex-shrink-0 aspect-video sm:aspect-auto flex items-center justify-center bg-gray-100">
                 <img 
                     src={step.image} 
                     alt={`${step.title} 미리보기`} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
             <div className="p-5 sm:p-6 flex flex-col flex-grow items-start justify-center">
@@ -174,8 +174,8 @@ const StepCard: React.FC<{ step: TutorialStep }> = ({ step }) => (
             <CodeBlock code={step.code} language={step.language} />
         )}
         {step.image && (
-            <div className="mt-4 rounded-lg overflow-hidden border border-gray-200">
-                <img src={step.image} alt={step.title} className="w-full h-auto object-cover" />
+            <div className="mt-4 rounded-lg overflow-hidden border border-gray-200 flex justify-center items-center bg-gray-50">
+                <img src={step.image} alt={step.title} className="max-w-full h-auto object-contain" />
             </div>
         )}
     </div>

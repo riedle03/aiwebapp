@@ -27,7 +27,9 @@ export const HOME_SECTION: TutorialSectionData = {
 5. ##ICON:Cloud## **Netlify 회원가입**: 웹 애플리케이션을 배포하기 위한 서비스에 가입합니다.
 6. ##ICON:Github## **프로젝트 가져오기**: GitHub의 프로젝트를 Netlify와 연결합니다.
 7. ##ICON:KeyRound## **API 키 설정**: Gemini AI를 사용하기 위한 비밀 키를 안전하게 설정합니다.
-8. ##ICON:Rocket## **배포하기**: 단 몇 번의 클릭으로 나의 웹 애플리케이션을 인터넷에 공개합니다.` 
+8. ##ICON:Rocket## **배포하기**: 단 몇 번의 클릭으로 나의 웹 애플리케이션을 인터넷에 공개합니다.
+9. ##ICON:LayoutGrid## **결과물**: 이 가이드를 통해 만들 수 있는 다양한 AI 앱 예시를 둘러봅니다.
+10. ##ICON:User## **저자 소개**: 이 가이드를 만든 사람에 대해 알아봅니다.` 
   }]
 };
 
@@ -249,25 +251,25 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
     title: 'Gemini API 키 설정',
     steps: [
       {
-        title: '1. 배포 설정으로 이동',
-        text: 'Repository를 선택하면 배포 설정 페이지로 이동합니다. 여기서 중요한 단계는 우리 앱이 Gemini API를 사용할 수 있도록 API 키를 알려주는 것입니다.',
-        image: 'images/netlify-env-vars-1.png',
+        title: '1. 환경 변수 섹션으로 이동',
+        text: '프로젝트 가져오기 마지막 단계에서 프로젝트 이름을 설정한 후, 같은 페이지에서 아래로 스크롤하여 **Environment variables** 섹션을 찾습니다. **Add environment variables** 버튼을 클릭하세요.',
+        image: 'images/netlify-env-import1.png',
       },
       {
-        title: '2. 환경 변수 추가',
-        text: '설정 페이지에서 "Site configuration" > "Environment variables" 로 이동하여 "Add a variable" 버튼을 클릭합니다.\n\n환경 변수는 소스 코드에 직접 노출시키지 않고 API 키와 같은 민감한 정보를 안전하게 저장하는 방법입니다.',
-        image: 'images/netlify-env-vars-2.png',
+        title: '2. .env 파일에서 가져오기 선택',
+        text: '나타나는 드롭다운 메뉴에서 **Import from a .env file** 항목을 선택합니다. 이 방법을 사용하면 여러 환경 변수를 한 번에 편리하게 추가할 수 있습니다.',
       },
       {
-        title: '3. API_KEY 입력',
-        text: '두 개의 입력 필드가 나타납니다:\n\n- **Key**: `API_KEY` 라고 정확하게 입력합니다.\n- **Value**: Google AI Studio에서 발급받은 본인의 Gemini API 키를 붙여넣습니다.\n\n입력 후 "Create variable" 버튼을 클릭하여 저장합니다.',
-        image: 'images/netlify-env-vars-3.png',
+        title: '3. API 키 내용 입력 및 가져오기',
+        text: '`Import environment variables` 팝업창에서 `Contents of .env file` 입력란에 아래와 같이 API 키 정보를 입력하세요. `YOUR_API_KEY` 부분은 **반드시 Google AI Studio에서 발급받은 본인의 실제 API 키로 교체**해야 합니다.\n\n다른 옵션(Secret, Scopes 등)은 기본값을 그대로 두고, **Import variables** 버튼을 클릭하여 저장합니다.',
+        code: 'GEMINI_API_KEY=YOUR_API_KEY',
+        language: 'text',
+        image: 'images/netlify-env-import2.png',
       },
       {
         title: '참고: Gemini API 키 발급받기',
-        text: 'Gemini API 키는 [Google AI Studio](https://aistudio.google.com/app/apikey)에서 받을 수 있습니다. Google 계정으로 로그인하고 "Create API key in new project" 버튼을 클릭하여 키를 생성하세요. 생성된 키는 안전한 곳에 보관해야 합니다.',
-        image: 'images/netlify-env-vars-4.png',
-      }
+        text: 'Gemini API 키가 아직 없다면 [Google AI Studio](https://aistudio.google.com/app/apikey)에서 무료로 발급받을 수 있습니다. Google 계정으로 로그인하고 "Create API key" 버튼을 눌러 새 키를 생성하세요.',
+      },
     ],
   },
   {
@@ -275,18 +277,18 @@ export const TUTORIAL_SECTIONS: TutorialSectionData[] = [
     title: '배포하기',
     steps: [
       {
-        title: '1. 빌드 설정 확인',
-        text: '환경 변수를 추가한 후, 페이지 하단으로 스크롤하여 빌드 설정을 확인합니다. Vite 프로젝트의 기본 설정은 대부분 자동으로 감지됩니다.\n\n- **Build command**: `vite build` 또는 `npm run build`\n- **Publish directory**: `dist`\n\n특별한 경우가 아니라면 수정할 필요가 없습니다.',
+        title: '1. 배포 시작하기',
+        text: '모든 설정이 완료되었습니다. 이제 페이지 하단의 **Deploy project** 버튼을 클릭하여 전 세계에 당신의 웹 애플리케이션을 공개하세요. Netlify가 GitHub의 코드를 가져와 빌드하고 배포하는 모든 과정을 자동으로 처리해줍니다.',
         image: 'images/netlify-deploy-1.png',
       },
       {
-        title: '2. 배포 시작',
-        text: '"Deploy site" 버튼을 클릭하여 배포를 시작합니다. Netlify가 GitHub에서 코드를 가져와 빌드하고 전 세계 서버에 배포하는 과정을 자동으로 처리합니다.',
+        title: '2. 배포 진행 상황 확인',
+        text: '버튼을 클릭하면 Netlify가 배포를 시작합니다. 잠시 후 `Production` 라벨과 함께 녹색으로 사이트 주소가 표시되면 배포가 성공적으로 완료된 것입니다. 이 과정은 보통 1-2분 정도 소요됩니다.',
         image: 'images/netlify-deploy-2.png',
       },
       {
-        title: '3. 배포 완료 및 확인',
-        text: '배포가 진행되는 동안 로그를 확인할 수 있습니다. 몇 분 후 "Published"라고 표시되면 배포가 성공한 것입니다.\n\nNetlify가 제공하는 고유한 URL(예: `your-site-name.netlify.app`)을 클릭하여 여러분이 만든 웹 애플리케이션이 전 세계에 공개된 것을 확인해보세요!',
+        title: '3. 나의 웹 앱 확인하기!',
+        text: '이제 녹색으로 표시된 사이트 주소를 클릭하여 인터넷에 공개된 당신의 첫 AI 웹 애플리케이션을 확인해보세요! 축하합니다!',
         image: 'images/netlify-deploy-3.png',
       },
     ],
